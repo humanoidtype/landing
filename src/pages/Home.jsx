@@ -8,12 +8,12 @@ import {
 import Card from "../components/Card"
 
 const cardItems = [{
- image: "/public/default.svg",
+ image: "/default.svg",
  link: "#",
  title: "Card 1",
  desc: "Card 1 placeholder description"
 }, {
- image: "/public/default.svg",
+ image: "/default.svg",
  link: "#",
  title: "Card 2",
  desc: "Card 2 placeholder description"
