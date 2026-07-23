@@ -13,10 +13,12 @@ $routes = [
  'example' => 'endpoints/example.php',
 ];
 
-if (isset($routes[$route])) {
+if ($route === '') {
+ jsonResponse(['status' => 'ok', 'message' => 'Success']);
+} elseif (isset($routes[$route])) {
  require_once __DIR__ . '/' . $routes[$route];
 } else {
  http_response_code(404);
- echo json_encode(['error' => 'Not found']);
+ jsonResponse(['status' => 'error', 'message' => 'Not found']);
 }
 exit;
