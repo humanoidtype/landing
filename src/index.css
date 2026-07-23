@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+@theme {
+ --color-body: var(--color-orange-100);
+ --color-body-subtle: var(--color-orange-200);
+ --color-heading: var(--color-orange-50);
+
+ --color-brand: var(--color-orange-500);
+ --color-brand-strong: var(--color-orange-600);
+ --color-brand-subtle: var(--color-orange-300);
+
+ --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', sans-serif;
+}
+
+@layer base {
+ html {
+  scroll-behavior: smooth;
+ }
+
+ body {
+  @apply bg-stone-950 text-stone-100 antialiased;
+  font-family: var(--font-sans);
+ }
+
+ ::selection {
+  @apply bg-brand/30;
+ }
+}
